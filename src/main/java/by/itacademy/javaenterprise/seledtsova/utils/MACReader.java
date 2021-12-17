@@ -1,16 +1,11 @@
 package by.itacademy.javaenterprise.seledtsova.utils;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.net.UnknownHostException;
 
 public class MACReader {
-
-    private static final Logger logger = LoggerFactory.getLogger(MACReader.class);
 
     public static String getMacAddress() {
         InetAddress ip;
