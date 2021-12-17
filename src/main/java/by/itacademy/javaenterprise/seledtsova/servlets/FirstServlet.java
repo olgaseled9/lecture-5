@@ -24,12 +24,9 @@ public class FirstServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         PrintWriter out = response.getWriter();
         String ipAddress = IPReader.getIP(request);
-
         requestCount.incrementAndGet();
-
         out.println("Server IP: " + request.getLocalAddr());
         out.println("Client IP: " + ipAddress);
         out.println("MAC client: " + getMacAddress());

@@ -23,15 +23,14 @@ public class MACFilter extends HttpFilter {
         blackListMAC.add("00:21:57:00:1f:02");
         blackListMAC.add("00:22:57:00:1f:02");
         blackListMAC.add("00:23:57:00:1f:02");
-        blackListMAC.add("94-E9-79-10-E1-CD");
     }
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
         logger.info("MAC Filter started");
         if (blackListMAC.contains(MACReader.getMacAddress())) {
-            req.getRequestDispatcher("error.jsp").forward(req,res);
-         } else {
+            req.getRequestDispatcher("error.jsp").forward(req, res);
+        } else {
             chain.doFilter(req, res);
         }
         logger.info("MAC Filter finished");

@@ -6,7 +6,7 @@
 <body>
 <h1 style="color: blue">Ooooops</h1>
 <hr>
-<h2 style="color: green">Sorry,we can't found that page or your IP address is on the blocked list</h2>
+<h2 style="color: green">Sorry,we can't found that page or your IP or MAC address is on the blocked list</h2>
 
 <p style="color: indigo"> To continue, follow the link to the start page</p>
 <hr>
